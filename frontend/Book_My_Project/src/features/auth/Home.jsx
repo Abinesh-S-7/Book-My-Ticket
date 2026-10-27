@@ -30,7 +30,7 @@ export default function Home() {
         setIsLoading(true);
 
         try {
-            const response = await api.post('/auth/login', loginData);
+            const response = await api.post('api/auth/login', loginData);
             const { token, role } = response.data;
             login(token);
 
@@ -53,7 +53,7 @@ export default function Home() {
         setIsLoading(true);
 
         try {
-            await api.post('/auth/register', registerData);
+            await api.post('api/auth/register', registerData);
             alert("Registration successful! Please log in.");
             setRegisterData({ firstName: '', lastName: '', email: '', phoneNumber: '', password: '' });
             setActiveTab('login'); 

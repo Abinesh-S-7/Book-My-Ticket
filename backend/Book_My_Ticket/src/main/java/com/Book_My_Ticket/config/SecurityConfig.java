@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults()) // <--- ADD THIS LINE FIRST
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll() // Open login/register
+                        .requestMatchers("/auth/**").permitAll() // Open login/register
 
                         // ADMIN ONLY: Creating, updating, or deleting inventory
                         .requestMatchers(HttpMethod.POST, "/api/flights/**", "/api/trains/**", "/api/buses/**", "/api/hotels/**").hasRole("ADMIN")
