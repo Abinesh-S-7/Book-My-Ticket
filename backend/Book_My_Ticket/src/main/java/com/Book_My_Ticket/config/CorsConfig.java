@@ -8,8 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:5173","https://bookmyticket-seven.vercel.app/")
+        // Changed to "/**" to cover /auth, /api, and all other endpoints
+        registry.addMapping("/**")
+                // Removed the trailing slash from the Vercel URL
+                .allowedOrigins("http://localhost:5173", "https://bookmyticket-seven.vercel.app")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
