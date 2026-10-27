@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import Login from './features/auth/Login';
 import UserDashboard from './features/customer/UserDashboard';
 import Bookings from './features/customer/Bookings';
 import BookFlights from './features/customer/BookFlights';
@@ -8,7 +7,6 @@ import BookTrains from './features/customer/BookTrains';
 import BookBuses from './features/customer/BookBuses';
 import BookHotels from './features/customer/BookHotels';
 import Home from './features/auth/Home';
-import Register from './features/auth/Register';
 import AdminDashboard from './features/admin/AdminDashboard';
 
 function App()
@@ -20,8 +18,7 @@ function App()
         <Routes>
           <Route path='/' element={<Home/>}/>
 
-          <Route path='/login' element={<Login/>}/>
-          <Route path="/register" element={<Register />}/>
+
           <Route path="/admin" element={<AdminDashboard />} />
 
           <Route path='/dashboard' element={<UserDashboard/>}/>
