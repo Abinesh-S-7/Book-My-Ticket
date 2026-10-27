@@ -1,0 +1,41 @@
+.admin-module-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.admin-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.admin-top-bar h3 {
+    margin: 0;
+    color: #1a2b4c;
+    font-size: 22px;
+}
+
+.admin-table-container {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #eee;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #1a2b4c;
+    color: white;
+}

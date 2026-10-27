@@ -1,0 +1,94 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #1a2b4c;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.modal-form-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.modal-form-group input, .modal-form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.price-calculation {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 24px;
+    color: #28a745;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-cancel-modal {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #d32f2f;
+    color: #d32f2f;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirm-pay {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirm-pay:hover {
+    background: #0056b3;
+}

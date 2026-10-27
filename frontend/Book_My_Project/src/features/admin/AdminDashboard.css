@@ -1,0 +1,111 @@
+.admin-layout {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f6f9;
+    font-family: sans-serif;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background-color: #091255;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.admin-brand {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    letter-spacing: 1px;
+}
+
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    flex: 1;
+    justify-content: center;
+    gap:20px;
+    border-radius: 20px;
+}
+.admin-nav-item img{
+    width: 30px;
+    border-radius: 10px;
+}
+.admin-nav-item {
+    padding: 15px 25px;
+    color: #b0bec5;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-nav-item:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.admin-nav-item.active {
+    background-color: #007bff;
+    color: white;
+    border-left: 4px solid #fff;
+}
+
+.admin-logout {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-admin-logout {
+    width: 100%;
+    padding: 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.btn-admin-logout:hover {
+    background-color: #b71c1c;
+}
+
+.admin-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.admin-header {
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.admin-main-view {
+    padding: 30px;
+}

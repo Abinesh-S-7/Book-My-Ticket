@@ -1,0 +1,352 @@
+.bus-booking-page {
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bus-hero-section {
+    height: 35vh;
+    background-color: #004d40;
+    background-image: url('../../assets/bus.png'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bus-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.6));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.bus-hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.bus-hero-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.bus-booking-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.modern-search-box {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group select, .input-group input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s;
+    cursor: pointer;
+}
+
+.input-group select:focus, .input-group input:focus {
+    border-color: #00897b;
+    outline: none;
+    background-color: white;
+}
+
+.swap-icon {
+    font-size: 24px;
+    color: #00897b;
+    margin-top: 20px;
+}
+
+.btn-search-modern.bus-theme-btn {
+    padding: 12px 30px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 48px;
+    margin-top: 24px;
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+
+.btn-search-modern.bus-theme-btn:hover {
+    background-color: #f57c00;
+    transform: translateY(-2px);
+}
+
+.results-title {
+    color: #004d40;
+    margin: 40px 0 20px 0;
+    font-size: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.bus-results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.modern-bus-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #00897b;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modern-bus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.bus-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.operator-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.operator-logo {
+    width: 45px;
+    height: 45px;
+    background-color: #e0f2f1;
+    color: #00897b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.operator-name {
+    margin: 0 0 4px 0;
+    color: #1a2b4c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bus-number {
+    color: #777;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bus-type-badge {
+    background: #e0f2f1;
+    color: #00796b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #b2dfdb;
+}
+
+.route-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.timeline-point {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-point.text-right {
+    text-align: right;
+}
+
+.timeline-point .time {
+    font-size: 24px;
+    font-weight: 800;
+    color: #333;
+}
+
+.timeline-point .station {
+    font-size: 16px;
+    font-weight: bold;
+    color: #004d40;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+.timeline-point .date-sub {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+}
+
+.timeline-divider {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.timeline-divider .line {
+    flex: 1;
+    height: 2px;
+    background-color: #00897b;
+    opacity: 0.3;
+}
+
+.duration-badge {
+    background: white;
+    border: 1px solid #b2dfdb;
+    color: #00897b;
+    padding: 5px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.bus-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #eaeaea;
+    padding-top: 20px;
+}
+
+.seat-status {
+    font-size: 13px;
+    font-weight: 700;
+    background: #f8f9fa;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.text-green { color: #28a745; }
+.text-red { color: #dc3545; }
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-block {
+    display: flex;
+    align-items: flex-start;
+    color: #1a2b4c;
+}
+
+.currency {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-right: 2px;
+}
+
+.amount {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.btn-book-modern.bus-theme-btn {
+    background-color: #ff9800; 
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-book-modern.bus-theme-btn:hover:not(:disabled) {
+    background-color: #f57c00;
+}
+
+.btn-book-modern.bus-theme-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+    font-size: 16px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px dashed #ccc;
+}
+
+.loading-spinner {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #00897b;
+}
+
+.error-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #d32f2f;
+    font-weight: bold;
+    background: #ffebee;
+    padding: 15px;
+    border-radius: 8px;
+}

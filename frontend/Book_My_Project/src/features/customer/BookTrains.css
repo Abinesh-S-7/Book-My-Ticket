@@ -1,0 +1,334 @@
+.train-booking-page {
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.train-hero-section {
+    height: 35vh;
+    background-color: #1a2b4c;
+    background-image: url('../../assets/train.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.train-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(26, 43, 76, 0.9), rgba(26, 43, 76, 0.6));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.train-hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.train-hero-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.train-booking-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.modern-search-box {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group select, .input-group input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s;
+    cursor: pointer;
+}
+
+.input-group select:focus, .input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: white;
+}
+
+.swap-icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-search-modern {
+    padding: 12px 30px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 48px;
+    margin-top: 24px;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+.btn-search-modern:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+}
+
+.results-title {
+    color: #1a2b4c;
+    margin: 40px 0 20px 0;
+    font-size: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.train-results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.modern-train-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #1a2b4c;
+    transition: transform 0.2s;
+}
+
+.modern-train-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.train-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.train-title-block h3 {
+    margin: 0 0 5px 0;
+    color: #1a2b4c;
+    font-size: 20px;
+}
+
+.train-number {
+    background: #eef2f6;
+    color: #1a2b4c;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Beautiful Timeline Layout */
+.route-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.timeline-point {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-point.text-right {
+    text-align: right;
+}
+
+.timeline-point .time {
+    font-size: 22px;
+    font-weight: 800;
+    color: #333;
+}
+
+.timeline-point .station {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 4px;
+}
+
+.timeline-point .date-sub {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+}
+
+.timeline-divider {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.timeline-divider .line {
+    flex: 1;
+    height: 2px;
+    background-color: #ddd;
+    border-top: 2px dashed #bbb;
+}
+
+.duration-badge {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #555;
+    font-weight: bold;
+}
+
+.classes-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.class-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 180px;
+    overflow: hidden;
+}
+
+.class-card.available {
+    border-color: #c3e6cb;
+}
+
+.class-card.waitlist {
+    border-color: #f5c6cb;
+    opacity: 0.8;
+}
+
+.class-card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.class-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.class-price {
+    font-weight: bold;
+    color: #1a2b4c;
+}
+
+.class-card-body {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.seat-status {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.text-green { color: #28a745; }
+.text-red { color: #dc3545; }
+
+.btn-book-sm {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-book-sm:hover:not(:disabled) {
+    background-color: #e64a19;
+}
+
+.btn-book-sm:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+    font-size: 16px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px dashed #ccc;
+}
+
+.loading-spinner {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.error-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #d32f2f;
+    font-weight: bold;
+    background: #ffebee;
+    padding: 15px;
+    border-radius: 8px;
+}
