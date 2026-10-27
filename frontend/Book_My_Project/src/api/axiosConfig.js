@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL : 'http://localhost:8080/api',
+    baseURL : "https://book-my-ticket-qwng.onrender.com",
 });
 
 api.interceptors.request.use(
