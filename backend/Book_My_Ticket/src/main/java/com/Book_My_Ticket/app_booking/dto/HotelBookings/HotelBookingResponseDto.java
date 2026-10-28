@@ -15,7 +15,8 @@ public record HotelBookingResponseDto(
         Integer numberOfRooms,
         Double totalAmount,
         BookingStatus status,
-        LocalDateTime bookingDate
+        LocalDateTime bookingDate,
+        String userEmail
 ) {
     public static HotelBookingResponseDto fromEntity(HotelBooking booking)
     {
@@ -28,7 +29,8 @@ public record HotelBookingResponseDto(
                 booking.getNumberOfRooms(),
                 booking.getAmount(),
                 booking.getStatus(),
-                booking.getBookingDate()
+                booking.getBookingDate(),
+                booking.getUser().getEmail()
 
         );
     }

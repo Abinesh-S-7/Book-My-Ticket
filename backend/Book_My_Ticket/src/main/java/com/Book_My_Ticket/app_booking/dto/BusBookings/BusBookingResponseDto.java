@@ -15,7 +15,8 @@ public record BusBookingResponseDto(
         Integer numberOfSeatsBooked,
         Double totalAmountPaid,
         BookingStatus status,
-        LocalDateTime bookingDate
+        LocalDateTime bookingDate,
+        String userEmail
 ) {
     public static BusBookingResponseDto fromEntity(BusBooking busBooking)
     {
@@ -29,7 +30,8 @@ public record BusBookingResponseDto(
                 busBooking.getNumberOfSeats(),
                 busBooking.getAmount(),
                 busBooking.getStatus(),
-                busBooking.getBookingDate()
+                busBooking.getBookingDate(),
+                busBooking.getUser().getEmail()
 
         );
     }

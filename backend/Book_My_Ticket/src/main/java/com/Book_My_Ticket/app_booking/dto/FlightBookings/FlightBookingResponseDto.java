@@ -13,7 +13,8 @@ public record FlightBookingResponseDto(
         Integer numberOfSeatsBooked,
         Double totalAmountPaid,
         BookingStatus status,
-        LocalDateTime bookingDate
+        LocalDateTime bookingDate,
+        String userEmail
 ) {
 
     public static FlightBookingResponseDto fromEntity(FlightBooking flightBooking)
@@ -26,7 +27,8 @@ public record FlightBookingResponseDto(
                 flightBooking.getNumberOfSeats(),
                 flightBooking.getTotalAmount(),
                 flightBooking.getStatus(),
-                flightBooking.getBookingDate()
+                flightBooking.getBookingDate(),
+                flightBooking.getUser().getEmail()
         );
     }
 }
