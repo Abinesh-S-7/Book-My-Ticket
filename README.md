@@ -57,64 +57,99 @@ BookMyTicket is an enterprise-grade, multi-modal travel reservation platform eng
 
 ---
 
-## ⚙️ Configuration & Deployment Details
+## ⚙️ Configuration & Deployment
 
-### 1. Database & Environment Variables (`application.properties`)
-Credentials are externalized to comply with GitHub Secret Scanning and Push Protection:
+### 1. Environment Variables
+
+Configure your database credentials using environment variables. Never commit database passwords, JWT secrets, or other credentials to GitHub.
+
+Example `application.properties` configuration:
 
 ```properties
-spring.datasource.url=jdbc:mysql://bookmyticket-samabi236-1ab4.f.aivencloud.com:19533/defaultdb?ssl-mode=REQUIRED
-spring.datasource.username=avnadmin
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
 
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+spring.jpa.show-sql=false
 ```
 
-### 2. Multi-Stage `Dockerfile` (JDK 27)
+Set `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` in your local environment or deployment platform.
+
+### 2. Docker Deployment
+
+The backend uses a multi-stage Docker build to separate compilation from runtime.
+
 ```dockerfile
-# Build Stage
+# Build stage
 FROM maven:3-eclipse-temurin-27 AS build
+
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
+
 RUN mvn clean package -DskipTests
 
-# Run Stage
+# Runtime stage
 FROM eclipse-temurin:27-jre
+
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 8080
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
----
+> This example assumes the project uses JDK 27 and produces an executable Spring Boot JAR. Adjust it to match your actual build configuration.
 
 ## 🚀 Running Locally
 
-### 1. Backend
-```bash
+### Prerequisites
+
+- Java Development Kit compatible with the project
+- Node.js and npm
+- MySQL database
+- Git
+
+### 1. Start the Backend
+
+Open PowerShell:
+
+```powershell
 cd backend/Book_My_Ticket
 
-# Set your Aiven or local MySQL password in your terminal session
-# PowerShell:
+$env:DB_URL="jdbc:mysql://localhost:3306/your_database"
+$env:DB_USERNAME="your_username"
 $env:DB_PASSWORD="your_database_password"
 
-# Run via Maven Wrapper
-./mvnw spring-boot:run
+.\mvnw spring-boot:run
 ```
 
-### 2. Frontend
+Replace the example database URL and credentials with your actual configuration.
+
+### 2. Start the Frontend
+
+Open another terminal:
+
 ```bash
 cd frontend/Book_My_Project
-
-# Install dependencies and start Vite dev server
 npm install
 npm run dev
 ```
 
----
-
+Open the local URL printed by Vite in your terminal.
 
 ## 👨‍💻 Author
-**Abinesh S**
+
+**Abinesh S.**
+
+- [GitHub](https://github.com/Abinesh-S-7)
+- [LinkedIn](https://www.linkedin.com/)
+
+## 🌐 Live Demo
+
+- [BookMyTicket Frontend](https://bookmyticket-seven.vercel.app/)
+- [Backend REST API](https://book-my-ticket-qwng.onrender.com/)
+
+**Deployment note:** The Render free-tier backend may take approximately 45–60 seconds to respond after inactivity, as described in the deployment configuration.
