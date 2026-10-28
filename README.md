@@ -57,6 +57,93 @@ BookMyTicket is an enterprise-grade, multi-modal travel reservation platform eng
 
 ---
 
+## 📸 Application Screenshots
+
+### 🔐 Authentication
+
+The login and registration interface provides the entry point for customers to access the BookMyTicket platform.
+
+![BookMyTicket Login and Registration](docs/screenshots/login.png)
+
+### 👤 Customer Portal
+
+Explore the customer-facing interface for searching travel options, reviewing availability, and managing reservations across four travel categories.
+
+#### Home Page
+
+The unified home page provides access to flights, trains, buses, and hotels from a single interface.
+
+![BookMyTicket Customer Home Page](docs/screenshots/customer-home.png)
+
+#### Train Booking
+
+Search trains by source, destination, and travel date, then review available services and journey details.
+
+![Train Search Results](docs/screenshots/customer-trains.png)
+
+#### Flight Booking
+
+Browse available flights, compare journey information, and explore flight reservation options.
+
+![Flight Search Results](docs/screenshots/customer-flights.png)
+
+#### Bus Booking
+
+Find bus services between cities and review departure information, fares, and available options.
+
+![Bus Search Results](docs/screenshots/customer-buses.png)
+
+#### Hotel Reservations
+
+Search hotels by destination and stay dates, and review property details and room availability.
+
+![Hotel Search Results](docs/screenshots/customer-hotels.png)
+
+#### My Bookings
+
+View reservations by category and review booking status, journey details, and payment amounts.
+
+![Customer Booking History](docs/screenshots/customer-bookings.png)
+
+[🌐 **Try BookMyTicket Live**](https://bookmyticket-seven.vercel.app/)
+
+
+### 🛡️ Admin Portal
+
+#### Platform Overview & Analytics
+
+The admin dashboard summarizes registered users, bookings, revenue, booking categories, and available travel inventory.
+
+![Admin Dashboard and Analytics](docs/screenshots/admin-dashboard.png)
+
+#### Flight Inventory Management
+
+Manage flight inventory and review routes, departure dates, pricing, and seat availability.
+
+![Flight Inventory Management](docs/screenshots/flight-management.png)
+
+#### Train Inventory Management
+
+Access train inventory management, route search, departure information, and configured seating classes.
+
+![Train Inventory Management](docs/screenshots/train-management.png)
+
+#### Bus Inventory Management
+
+Manage bus inventory, route details, departure schedules, ticket prices, and seat availability.
+
+![Bus Inventory Management](docs/screenshots/bus-management.png)
+
+#### System Transactions Ledger
+
+Review booking transactions across flights, trains, buses, and hotels, including booking references, payment amounts, and statuses.
+
+![System Transactions Ledger](docs/screenshots/transactions-ledger.png)
+
+---
+
+**Explore the live application:** [BookMyTicket](https://bookmyticket-seven.vercel.app/)
+
 ## ⚙️ Configuration & Deployment
 
 ### 1. Environment Variables
