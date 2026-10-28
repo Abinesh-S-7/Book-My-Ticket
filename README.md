@@ -1,8 +1,3 @@
-The updated `README.md` incorporates your exact modular, domain-driven backend packages (`admin`, `app_booking`, `app_bus`, `app_flight`, `app_hotel`, `app_payment`, `app_train`, `app_user`, `auth`, `config`, `enums`, `exception`, `security`) and feature-based React architecture (`api`, `assets`, `components`, `context`, `features`).
-
-You can click the **Copy** icon in the top-right corner of the code block below to paste it directly into your root `README.md` file, or run the quick PowerShell script at the bottom to generate the file automatically.
-
-```markdown
 # 🎫 BookMyTicket — Full-Stack Travel & Ticketing Super-App
 
 BookMyTicket is an enterprise-grade, multi-modal travel reservation platform engineered to handle end-to-end bookings across **Flights, Trains, Buses, and Hotels**. The system is built on a domain-driven **Spring Boot** REST API containerized with **Docker**, a feature-sliced **React (Vite)** frontend, and a cloud-managed **MySQL** relational database.
