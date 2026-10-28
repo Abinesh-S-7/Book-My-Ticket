@@ -38,7 +38,7 @@ A full-stack travel reservation application that brings **Flights, Trains, Buses
 ### Backend
 
 - **Language:** Java (JDK 27)
-- **Framework:** Spring Boot
+- **Framework:** Spring Boot (4.1.2)
 - **Security:** Spring Security, JWT authentication, BCrypt password hashing, and role-based authorization
 - **Persistence:** Spring Data JPA, Hibernate ORM, MySQL Connector/J, and HikariCP
 - **API design:** REST controllers, DTOs, Jakarta Bean Validation, and global exception handling
@@ -293,7 +293,7 @@ This Dockerfile assumes that the backend produces an executable Spring Boot JAR 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Abinesh-S-7/BookMyTicket.git
+git clone https://github.com/Abinesh-S-7/Book-My-Ticket.git
 cd BookMyTicket
 ```
 
