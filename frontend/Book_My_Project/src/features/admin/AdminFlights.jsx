@@ -29,7 +29,7 @@ function AdminFlights() {
 
     async function fetchAllFlights() {
         try {
-            const response = await api.get('/flights/all');
+            const response = await api.get('api/flights/all');
             setFlights(response.data);
             setFilteredFlights(response.data);
         } catch (err) {
@@ -116,7 +116,7 @@ function AdminFlights() {
         };
 
         try {
-            await api.post('/flights/add', payload);
+            await api.post('api/flights/add', payload);
             alert("Flight created successfully!");
             setFormData({ flightNumber: '', airlineName: '', source: '', destination: '', departureTime: '', arrivalTime: '', price: '', totalSeats: '' });
             setStops([]);
@@ -133,7 +133,7 @@ function AdminFlights() {
     async function handleDelete(flightId) {
         if(!window.confirm("Are you sure you want to delete this flight?")) return;
         try {
-            await api.delete(`/flights/delete/${flightId}`);
+            await api.delete(`api/flights/delete/${flightId}`);
             fetchAllFlights();
         } catch(err) {
             console.error(err);

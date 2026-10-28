@@ -13,7 +13,7 @@ function AdminHomeDashboard() {
 
     async function fetchAnalytics() {
         try {
-            const response = await api.get('/admin/analytics/dashboard');
+            const response = await api.get('api/admin/analytics/dashboard');
             setStats(response.data);
         } catch (err) {
             console.error("Failed to load dashboard metrics:", err);

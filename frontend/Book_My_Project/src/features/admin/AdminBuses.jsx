@@ -36,7 +36,7 @@ function AdminBuses() {
 
     async function fetchAllBuses() {
         try {
-            const response = await api.get('/buses/all');
+            const response = await api.get('api/buses/all');
             setBuses(response.data);
             setFilteredBuses(response.data);
         } catch (err) {
@@ -109,7 +109,7 @@ function AdminBuses() {
         };
 
         try {
-            await api.post('/buses/add', payload);
+            await api.post('api/buses/add', payload);
             alert("Bus created successfully!");
             setFormData({ busNumber: '', operatorName: '', busType: '', source: '', destination: '', departureTime: '', arrivalTime: '', price: '', totalSeats: '' });
             setBoardingPoints([]);
@@ -127,7 +127,7 @@ function AdminBuses() {
     async function handleDelete(busId) {
         if(!window.confirm("Are you sure you want to delete this bus?")) return;
         try {
-            await api.delete(`/buses/delete/${busId}`);
+            await api.delete(`api/buses/delete/${busId}`);
             fetchAllBuses();
         } catch(err) {
             console.error(err);

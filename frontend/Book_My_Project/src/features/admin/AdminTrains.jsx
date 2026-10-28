@@ -35,7 +35,7 @@ function AdminTrains() {
 
     async function fetchAllTrains() {
         try {
-            const response = await api.get('/trains/all');
+            const response = await api.get('api/trains/all');
             setTrains(response.data);
             setFilteredTrains(response.data);
         } catch (err) {
@@ -128,7 +128,7 @@ function AdminTrains() {
         };
 
         try {
-            await api.post('/trains/add', payload);
+            await api.post('api/trains/add', payload);
             alert("Train created successfully!");
             setFormData({ trainNumber: '', trainName: '', source: '', destination: '', departureTime: '', arrivalTime: '' });
             setClasses([]);
@@ -146,7 +146,7 @@ function AdminTrains() {
     async function handleDelete(trainId) {
         if(!window.confirm("Are you sure you want to delete this train?")) return;
         try {
-            await api.delete(`/trains/delete/${trainId}`);
+            await api.delete(`api/trains/delete/${trainId}`);
             fetchAllTrains();
         } catch(err) {
             console.error(err);

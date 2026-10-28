@@ -36,7 +36,7 @@ function AdminHotels() {
 
     async function fetchAllHotels() {
         try {
-            const response = await api.get('/hotels/all');
+            const response = await api.get('api/hotels/all');
             setHotels(response.data);
             setFilteredHotels(response.data);
         } catch (err) {
@@ -162,7 +162,7 @@ function AdminHotels() {
         };
 
         try {
-            await api.post('/hotels/add', payload);
+            await api.post('api/hotels/add', payload);
             alert("Hotel created successfully!");
             setFormData({ name: '', city: '', address: '', starRating: '', description: '' });
             setRooms([]);
@@ -179,7 +179,7 @@ function AdminHotels() {
     async function handleDelete(hotelId) {
         if(!window.confirm("Are you sure you want to delete this hotel?")) return;
         try {
-            await api.delete(`/hotels/delete/${hotelId}`);
+            await api.delete(`api/hotels/delete/${hotelId}`);
             fetchAllHotels();
         } catch(err) {
             console.error(err);

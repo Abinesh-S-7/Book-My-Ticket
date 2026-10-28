@@ -13,7 +13,7 @@ function AdminTransactions() {
 
     async function fetchAllTransactions() {
         try {
-            const response = await api.get('/admin/transactions/all');
+            const response = await api.get('api/admin/transactions/all');
             setTransactions(response.data);
         } catch (err) {
             console.error("Failed to fetch system transactions:", err);
