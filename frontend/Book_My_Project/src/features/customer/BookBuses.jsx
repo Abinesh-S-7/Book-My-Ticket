@@ -35,7 +35,7 @@ export default function BookBuses() {
         setError('');
         
         try {
-            const response = await api.get(`/buses/search?source=${source}&destination=${destination}&date=${date}`);
+            const response = await api.get(`api/buses/search?source=${source}&destination=${destination}&date=${date}`);
             setAvailableBuses(response.data);
             setIsLoading(false);
         } catch (err) {
@@ -58,7 +58,7 @@ export default function BookBuses() {
         };
 
         try {
-            await api.post('/bus-bookings/create', bookingRequest);
+            await api.post('api/bus-bookings/create', bookingRequest);
             alert("Bus booked and payment processed successfully!");
             setIsModalOpen(false);
             navigate('/bookings');

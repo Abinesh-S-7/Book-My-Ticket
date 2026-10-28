@@ -13,7 +13,6 @@ export default function UserDashboard() {
         <div className="home-wrapper">
             <Navbar />
             
-            {/* Full Width Hero Banner */}
             <div className="hero-section">
                 <div className="hero-overlay">
                     <div className="hero-content">
@@ -26,7 +25,6 @@ export default function UserDashboard() {
                 </div>
             </div>
 
-            {/* Floating Overlapping Cards */}
             <div className="booking-cards-container">
                 <div className="action-card" onClick={() => navigate('/book-flights')}>
                     <div className="icon-wrapper">

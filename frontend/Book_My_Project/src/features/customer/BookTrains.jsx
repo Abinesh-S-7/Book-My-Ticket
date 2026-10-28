@@ -37,7 +37,7 @@ function BookTrains() {
         setError('');
         
         try {
-            const response = await api.get(`/trains/search?source=${source}&destination=${destination}&date=${date}`);
+            const response = await api.get(`api/trains/search?source=${source}&destination=${destination}&date=${date}`);
             setAvailableTrains(response.data);
             setIsLoading(false);
         } catch (err) {
@@ -60,7 +60,7 @@ function BookTrains() {
         };
 
         try {
-            await api.post('/train-bookings/create', bookingRequest);
+            await api.post('api/train-bookings/create', bookingRequest);
             alert("Train booked and payment processed successfully!");
             setIsModalOpen(false); 
             navigate('/bookings');

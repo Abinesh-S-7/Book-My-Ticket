@@ -21,7 +21,7 @@ export default function Bookings(){
 
     async function fetchMyTrips() {
         try{
-            const response = await api.get('dashboard/my-trips');
+            const response = await api.get('api/dashboard/my-trips');
             setBookingsData(response.data);
             setIsLoading(false);
         }
@@ -47,10 +47,10 @@ export default function Bookings(){
 
         let endpoint = '';
         switch(type) {
-            case 'flight': endpoint = `/flight-bookings/cancel/${bookingId}`; break;
-            case 'train': endpoint = `/train-bookings/cancel/${bookingId}`; break;
-            case 'bus': endpoint = `/bus-bookings/cancel/${bookingId}`; break;
-            case 'hotel': endpoint = `/hotel-bookings/cancel/${bookingId}`; break;
+            case 'flight': endpoint = `api/flight-bookings/cancel/${bookingId}`; break;
+            case 'train': endpoint = `api/train-bookings/cancel/${bookingId}`; break;
+            case 'bus': endpoint = `api/bus-bookings/cancel/${bookingId}`; break;
+            case 'hotel': endpoint = `api/hotel-bookings/cancel/${bookingId}`; break;
             default: return;
         }
 

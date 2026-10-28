@@ -36,7 +36,7 @@ export default function BookFlights() {
         setError('');
         
         try {
-            const response = await api.get(`/flights/search?source=${source}&destination=${destination}&date=${date}`);
+            const response = await api.get(`api/flights/search?source=${source}&destination=${destination}&date=${date}`);
             setAvailableFlights(response.data);
             setIsLoading(false);
         } catch (err) {
@@ -59,7 +59,7 @@ export default function BookFlights() {
         };
 
         try {
-            await api.post('/flight-bookings/create', bookingRequest);
+            await api.post('api/flight-bookings/create', bookingRequest);
             alert("Flight booked successfully!");
             setIsModalOpen(false);
             navigate('/bookings');

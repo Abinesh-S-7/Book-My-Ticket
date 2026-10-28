@@ -39,7 +39,7 @@ export default function BookHotels() {
         setError('');
         
         try {
-            const response = await api.get(`/hotels/search?city=${city}`);
+            const response = await api.get(`api/hotels/search?city=${city}`);
             setAvailableHotels(response.data);
             setIsLoading(false);
         } catch (err) {
@@ -70,7 +70,7 @@ export default function BookHotels() {
         };
 
         try {
-            await api.post('/hotel-bookings/create', bookingRequest);
+            await api.post('api/hotel-bookings/create', bookingRequest);
             alert("Hotel booked successfully!");
             setIsModalOpen(false);
             navigate('/bookings'); 
